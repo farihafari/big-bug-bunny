@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.5.1.min.js"></script>
+    <style>
+         .main1{
+           height: 400px;
+           width: 100%;
+           /* background-color: coral; */
+       }
+       .con1{
+           height: 380px;
+           width: 100%;
+           /* background-color: cadetblue; */
+           display: flex;
+           margin-left: 30px;
+       }
+       img{
+           height: 350px;
+           width: 99%;
+       }
+
+       .main2{
+           height: 900px;
+           width: 100%;
+           /* display: flex; */
+           /* background-color: black; */
+           display: none;
+       }
+       .con2{
+           height: 800PX;
+           width: 100%;
+           /* background-color: rgb(190, 131, 42); */
+           display: flex;
+       }
+       .con2 video{
+           height: 600px;
+           width: 60%;
+       }
+      .imgbar{
+          height: 800px;
+          width: 30%;
+          /* margin-left: 60PX; */
+          /* background-color: chartreuse; */
+      }
+      .imgbar img{
+          height: 292px;
+          width: 70%;
+      }
+      .main3{
+           height: 900px;
+           width: 100%;
+           /* display: flex; */
+           /* background-color: black; */
+           display: none;
+       }
+       .con3{
+           height: 800PX;
+           width: 100%;
+           /* background-color: rgb(190, 131, 42); */
+           display: flex;
+       }
+       .con3 video{
+           height: 600px;
+           width: 60%;
+       }
+       .main4{
+           height: 900px;
+           width: 100%;
+           /* display: flex; */
+           /* background-color: black; */
+           display: none;
+       }
+       .con4{
+           height: 800PX;
+           width: 100%;
+           /* background-color: rgb(190, 131, 42); */
+           display: flex;
+       }
+       .con4 video{
+           height: 600px;
+           width: 60%;
+       }
+    </style>
+</head>
+<body class="mx">
+    <script>
+        $(document).ready(function(){
+            $(".img1").click(function(){
+                $(".imgc").hide();
+                $(".main1").hide();
+                $(".main3").hide();
+                $(".main4").hide();
+                $(".main2").show();
+
+              
+            });
+            $(".img2").click(function(){
+              $(".imga").hide();
+              $(".main1").hide();
+              $(".main2").hide();
+              $(".main4").hide();
+              $(".main3").show();  
+            });
+            $(".img3").click(function(){
+                $(".imgb").hide();
+                $(".main1").hide();
+                $(".main2").hide();
+                $(".main3").hide();
+                $(".main4").show();
+            })
+            $('.imga').click(function(){
+                $(".imga").hide();
+                $(".imgc").show();
+                $(".imgb").show();
+                $('.vidt').hide();
+                $('.vidb').hide();
+                $('.vidw').show();
+            });
+            $(".imgb").click(function(){
+                $(".imgb").hide();
+                $(".imgc").show();
+                $(".imga").show();
+                $(".vidw").hide()
+                $(".vidt").hide();
+                $(".vidb").show();
+            });
+            $(".imgc").click(function(){
+                $(".imgc").hide();
+                $(".imga").show();
+                $(".imgb").show();
+                $(".vidb").hide();
+                $(".vidw").hide();
+                $(".vidt").show();
+            })
+        });
+       
+    </script>
+    
+    <div class="main1">
+        <div class="con1" >
+            <div class="img1"><img src="images/bny.png" alt=""></div>
+            <div class="img2"><img height="200" src="images/wrld1.png" alt=""></div>
+            <div class="img3"><img " width="90" src="images/bny1.png" alt=""></div>
+        </div> 
+    </div>
+       
+        <div class="main2">
+            <div class="con2">
+                <video class="vidt"  autoplay muted controls src="videos/Big_Buck_Bunny_1080_10s_1MB.mp4"></video>
+                <video class="vidb" style="display: none;"  autoplay muted controls src="videos/Big_Buck_Bunny_first_23_seconds_1080p.ogv.480p.vp9.webm"></video>
+                <video class="vidw" style="display: none;" autoplay muted controls src="videos/file_example_WEBM_640_1_4MB.webm"></video> 
+            <div class="imgbar">
+                <div class="imga"><img src="images/wrld1.png" alt=""></div>
+                <div class="imgb"><img src="images/bny1.png" alt=""></div>
+                <div class="imgc"><img src="images/bny.png" alt=""></div>
+            </div>
+        </div>
+        </div>
+        <div class="main3">
+            <div class="con3">
+                <video class="vidt" style="display: none;" autoplay muted controls src="videos/Big_Buck_Bunny_1080_10s_1MB.mp4"></video>
+                <video class="vidb" style="display: none;"  autoplay muted controls src="videos/Big_Buck_Bunny_first_23_seconds_1080p.ogv.480p.vp9.webm"></video>
+                <video class="vidw" autoplay muted controls src="videos/file_example_WEBM_640_1_4MB.webm"></video> 
+            <div class="imgbar">
+                <div class="imga"><img src="images/wrld1.png" alt=""></div>
+                <div class="imgb"><img src="images/bny1.png" alt=""></div>
+                <div class="imgc"><img src="images/bny.png" alt=""></div>
+            </div>
+        </div>
+        </div>
+        <div class="main4">
+            <div class="con4">
+                <video class="vidt" style="display: none;" autoplay muted controls src="videos/Big_Buck_Bunny_1080_10s_1MB.mp4"></video>
+                <video class="vidb"   autoplay muted controls src="videos/Big_Buck_Bunny_first_23_seconds_1080p.ogv.480p.vp9.webm"></video>
+                <video class="vidw" style="display: none;" autoplay muted controls src="videos/file_example_WEBM_640_1_4MB.webm"></video> 
+            <div class="imgbar">
+                <div class="imga"><img src="images/wrld1.png" alt=""></div>
+                <div class="imgb"><img src="images/bny1.png" alt=""></div>
+                <div class="imgc"><img src="images/bny.png" alt=""></div>
+            </div>
+        </div>
+        </div>
+       
+</body>
+</html>
